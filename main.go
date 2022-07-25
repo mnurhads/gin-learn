@@ -31,6 +31,11 @@ func setupRouter() *gin.Engine {
 	bankRepo := controllers.Baru()
 	r.POST("/banks", bankRepo.CreateBank)
 	r.GET("/banks", bankRepo.GetBanks)
+	r.GET("/banks/:id", bankRepo.GetBankById)
+	r.PUT("/banks/:id", bankRepo.UpdateBank)
+	r.DELETE("/banks/:id", bankRepo.DeleteBank)
 	// end banks route
+
+	// mengembalikan nilai route
 	return r
 }
