@@ -6,9 +6,9 @@ import (
 
 type User struct {
 	gorm.Model
-	ID    int
-	Name  string
-	Email string
+	ID    int	 `json:”id”`
+	Name  string `json:"name”`
+	Email string `json:”email”`
 }
 
 //create a user
