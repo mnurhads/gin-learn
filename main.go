@@ -28,7 +28,7 @@ func setupRouter() *gin.Engine {
 	r.DELETE("/users/:id", userRepo.DeleteUser)
 	// end users route
 	// banks route
-	bankRepo := controllers.New()
+	bankRepo := controllers.Baru()
 	r.POST("/banks", bankRepo.CreateBank)
 	r.GET("/banks", bankRepo.GetBanks)
 	// end banks route

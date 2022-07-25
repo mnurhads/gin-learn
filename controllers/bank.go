@@ -15,7 +15,7 @@ type BankRepo struct {
 	Db *gorm.DB
 }
 
-func New() *BankRepo {
+func Baru() *BankRepo {
 	db := database.InitDb()
 	db.AutoMigrate(&models.Bank{})
 	return &BankRepo{Db: db}
