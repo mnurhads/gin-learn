@@ -18,6 +18,7 @@ func InitDb() *gorm.DB {
 	return Db
 }
 
+// koneksi database dgn gorm
 func connectDB() (*gorm.DB) {
 	var err error
 	dsn := DB_USERNAME +":"+ DB_PASSWORD +"@tcp"+ "(" + DB_HOST + ":" + DB_PORT +")/" + DB_NAME + "?" + "parseTime=true&loc=Local"
